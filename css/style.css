@@ -37,12 +37,13 @@ body {
     right: 10px;
   }
   
-  body > img {
+  /*body > img {
     margin: 0px 10px 10px 0px;
-  }
+  }*/
   
   img {
     max-height: 250px;
+    margin: 0px 10px 10px 0px;
   }
 
   input {
@@ -59,9 +60,9 @@ body {
     background: #ffffff;
   }
   
-  /*.exibirImagem {
+  .exibirImagem {
     font-size: 20px;
     color: #ffffff;
     text-align: center;
     margin-top: 16px;
-  }*/
+  }
