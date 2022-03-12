@@ -1,20 +1,25 @@
-function Adicionar(){
-    var adicionar = document.getElementById("imagemUrl").value;
+var listarAnimes = [];
+var listarNomes = [];
 
-    if(adicionar.endsWith(".jpg") || adicionar.endsWith(".png")){
-        var listarAnimes = [];
-        listarAnimes.push(adicionar);
-        Listar(listarAnimes);
+function Adicionar(){
+    var adicionarImagem = document.getElementById("imagemUrl").value;
+    var adicionarNome = document.getElementById("nomeAnime").value;
+
+    if((adicionarNome != "" && adicionarNome != "undefined") && (adicionarImagem.endsWith(".jpg") || adicionarImagem.endsWith(".png"))){
+        listarAnimes.push(adicionarImagem);
+        listarNomes.push(adicionarNome);
+        Listar();
     } else {
-        alert("Insira um endereço de imagem válido. (.jpg ou .png)");
+        alert("Verifique se todas as informações estão corretas.");
     }
     document.getElementById("imagemUrl").value = "";
+    document.getElementById("nomeAnime").value = "";
 }
 
-function Listar(listarAnimes){
+function Listar(){
+    var elementoExibirImagem = document.getElementById("exibirImagem");
+    elementoExibirImagem.innerHTML = "";
     for (var i = 0; i < listarAnimes.length; i++) {
-        var animesFavoritos = "<img src=" + listarAnimes[i] + ">";
-        var elementoExibirImagem = document.getElementById("exibirImagem");
-        elementoExibirImagem.innerHTML = elementoExibirImagem.innerHTML + animesFavoritos;
+        elementoExibirImagem.innerHTML = elementoExibirImagem.innerHTML + '<div class="box"><img src="' + listarAnimes[i] + '"/><br><h3>'+ listarNomes[i] +'</h3></div>';
     }
 }

@@ -1,7 +1,7 @@
 body {
     font-family: "Roboto Mono", monospace;
     text-align: center;
-    background-image: url("https://i.pinimg.com/736x/04/4a/19/044a196bf2598a0e44f90ba1d15d28ca.jpg");
+    background-image: url("https://cdnb.artstation.com/p/assets/images/images/041/128/693/large/amanda-brotto-splash-anfitriao.jpg?1630852698");
     background-color: #000000;
     background-size: cover;
     background-position: center top;
@@ -46,6 +46,10 @@ body {
     margin: 0px 10px 10px 0px;
   }
 
+  h3 {
+    color: #ffffff;
+  }
+
   input {
     margin: 20px 4px 4px 4px;
     padding: 6px;
@@ -61,8 +65,8 @@ body {
   }
   
   .exibirImagem {
-    font-size: 20px;
-    color: #ffffff;
-    text-align: center;
-    margin-top: 16px;
+    display:inline-flex;
+    max-width: 80vw;
+    flex-wrap: wrap;
   }
+
