@@ -36,10 +36,13 @@ body {
     top: 10px;
     right: 10px;
   }
-  
-  /*body > img {
-    margin: 0px 10px 10px 0px;
-  }*/
+
+  .box {
+    display: inline-table;
+    width: 150px;
+    max-height: 250px;
+    justify-content: space-between;
+  }
   
   img {
     max-height: 250px;
@@ -48,6 +51,7 @@ body {
 
   h3 {
     color: #ffffff;
+    flex-wrap: wrap;
   }
 
   input {
@@ -56,7 +60,14 @@ body {
     border-radius: 5px;
     text-align: center;
   }
-  
+
+  .wrapper-inputs {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
   button {
     margin-top: 12px;
     padding: 4px 8px;
@@ -69,4 +80,3 @@ body {
     max-width: 80vw;
     flex-wrap: wrap;
   }
-
